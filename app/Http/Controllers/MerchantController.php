@@ -55,7 +55,7 @@ class MerchantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $merchant = Merchant :: create($request->all());
     }
 
     /**

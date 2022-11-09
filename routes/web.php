@@ -37,6 +37,7 @@ Route::get('/tableP', [SchoolController::class, 'dataP'])->name('tableP');
 Route::get('/tableM', [SchoolController::class, 'dataM'])->name('tableM');
 Route::get('/tableS', [SchoolController::class, 'dataS'])->name('tableS');
 Route::get('/chart', [SchoolController::class, 'dashboard'])->name('dashboard');
+Route::post('/search', [SchoolController::class, 'search'])->name('search');
 
 // Register Controllers
 Route::get('dashboard', [RegisterController::class, 'dashboard']);

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Models\{Present,Npresent,listing};
 
 class SchoolController extends Controller
 {
@@ -29,5 +31,17 @@ class SchoolController extends Controller
     public function dataS()
     {
         return view('school.tableS');
+    }
+
+    public function search(Request $request)
+    {
+        Present::where('date' >= $date)->get();
+        Npresent::where('date' >= $date)->get();
+        return view('school.chart');
+    }
+
+    public function store()
+    {
+        
     }
 }

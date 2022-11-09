@@ -55,7 +55,7 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User :: create($request->all());
     }
 
     /**

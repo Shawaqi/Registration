@@ -11,6 +11,7 @@
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
+
         @stack('script')
         @stack('script1')
 
@@ -55,7 +56,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                        <div class="small">Logged in as: {{ Auth::user() }}</div>
                     </div>
                 </nav>
             </div>
