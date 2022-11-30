@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+        @stack('script1')
+        @stack('script2')
+
+        @livewireStyles
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -25,7 +30,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('signout') }}">Logout</a></li>
+                        <li><a class="dropdown-item" href="{{ route('signout') }}">Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -35,12 +40,15 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Data Sekolah</div>
+                            <div class="sb-sidenav-menu-heading">Edit Table </div>
                             <a class="nav-link" href="{{ route('tableparent') }}">
                                 <div class="sb-nav-link-icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
                                 Back
                             </a>
                         </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
                     </div>
                 </nav>
             </div>
@@ -58,5 +66,5 @@
                 <script src="{{ asset('assets/demo/chart-bar-demo.js') }}"></script>
                 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
                 <script src="{{ asset('assets/js/datatables-simple-demo.js') }}"></script>
-    </body>
-</html>
+            </body>
+        </html>

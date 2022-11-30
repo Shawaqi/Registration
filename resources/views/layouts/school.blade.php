@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as: {{ Auth::user() }}</div>
+                        <div class="small">Logged in as:</div>
                     </div>
                 </nav>
             </div>

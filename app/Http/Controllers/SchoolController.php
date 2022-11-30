@@ -40,8 +40,5 @@ class SchoolController extends Controller
         return view('school.chart');
     }
 
-    public function store()
-    {
-        
-    }
+    
 }

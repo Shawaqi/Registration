@@ -30,7 +30,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Logout</a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
                     </ul>
                 </li>
             </ul>
@@ -41,19 +41,6 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Data Sekolah</div>
-                            {{-- <a class="nav-link" href="{{ route('tableP') }}">
-                                <div class="sb-nav-link-icon"><i class="fa fa-database" aria-hidden="true"></i></div>
-                                Table Parents
-                            </a>
-                            <a class="nav-link" href="{{ route('tableS') }}">
-                                <div class="sb-nav-link-icon"><i class="fa fa-database" aria-hidden="true"></i></div>
-                                Table Staffs
-                            </a>
-                            <a class="nav-link" href="{{ route('tableM') }}">
-                                <div class="sb-nav-link-icon"><i class="fa fa-database" aria-hidden="true"></i></div>
-                                Table Merchants
-                            </a>
-                            <hr> --}}
                             <a class="nav-link" href="{{ route('tableschool') }}">
                                 <div class="sb-nav-link-icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
                                 Back

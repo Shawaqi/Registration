@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 use App\Models\Listings;
+use App\Models\User;
+use App\Models\studentform;
 
 use App\Http\Livewire\Field;
 
@@ -79,7 +81,9 @@ class Counter extends Component
 
     public function render()
     {
-        return view('livewire.counter');
+        $data = User::where('id', auth()->user()->id)->get();
+        // $student = studentform::where('id', auth()->user()->id)->get();
+        return view('livewire.counter')->with(['data' => $data]);
     }
 
 

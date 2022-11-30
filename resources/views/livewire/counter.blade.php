@@ -4,7 +4,7 @@
                     <main>
                         <div class="container-fluid px-4">
                             <h2 style="text-align: center">Form Parents/Guradians & Students</h2>
-                            <form enctype="multipart/form-data" method="POST" action="">
+                            <form enctype="multipart/form-data" method="POST" action="{{  route('saveparents') }}">
                                 @csrf
 
                                 {{--step1--}}
@@ -12,25 +12,25 @@
                                 <div class="step-one ">
                                     <div class="card">
                                         <div class="card-header bg-secondary text-white">Step 1 Guardian Details 1 / Maklumat Penjaga 1 (optional)</div>
+                                        @foreach ($data as $data)
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="">First Name</label><span style="color: brown">*</span>
-                                                        <input type="text" class="form-control" placeholder="First Name" name="fp_name"  required >
+                                                        <input type="text" class="form-control" value="{{ $data->name }}" name="fp_name"  required >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="">Middle Name</label>
-                                                        <input type="text" class="form-control" placeholder="Middle Name" name="sp_name"  required >
+                                                        <input type="text" class="form-control" value="{{ $data->mname }}" name="sp_name"  required >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="">Surname</label><span style="color: brown">*</span>
-                                                        <input type="text" class="form-control" placeholder="Surname" name="tp_name" >
-
+                                                        <input type="text" class="form-control" value="{{ $data->sname }}" name="tp_name" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,7 +65,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="">Email</label><span style="color: brown">*</span>
-                                                            <input type="email" class="form-control" placeholder="anything@gmail.com" name="p_email" >
+                                                            <input type="text" class="form-control" value="{{ $data->email }}" name="p_email" >
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
@@ -131,6 +131,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>

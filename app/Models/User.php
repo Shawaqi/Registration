@@ -22,7 +22,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role',
         'mname',
         'sname',
         'ic',
@@ -40,22 +39,26 @@ class User extends Authenticatable
         'gaji',
         'relationship',
 
-        'fp_name2',
-        'sp_name2',
-        'tp_name2',
-        'p_ic2',
+        'fname2',
+        'mname2',
+        'sname2',
+        'ic2',
         'passport2',
-        'pdob2',
-        'p_email2',
-        'p_phone2',
-        'pa_phone2',
-        'p_gender2',
-        'p_races2',
-        'p_address12',
-        'p_address22',
-        'p_state2',
+        'birthday2',
+        'phone2',
+        'altphone2',
+        'gender2',
+        'races2',
+        'faddress',
+        'saddress',
+        'state2',
         'relationship2',
     ];
+
+    public function student()
+    {
+        // return $this->hasMany(studentform::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

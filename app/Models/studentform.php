@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class studentform extends Model
 {
     use HasFactory;
+    protected $table = 'studentform';
     protected $fillable = [
         'user_id',
         'fname',
@@ -23,4 +24,10 @@ class studentform extends Model
         'ppd',
         'school',
     ];
+
+    public function user()
+    {
+        // return $this->belongsTo(User::class);
+    }
 }
+

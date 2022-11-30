@@ -16,6 +16,7 @@ class MerchantController extends Controller
     {
         $list = listing::distinct()->get(["negeri"]);
         return view('merchant.formmerchants' , ['list' => $list]);
+
     }
 
     public function findCities(Request $request)
@@ -34,7 +35,8 @@ class MerchantController extends Controller
 
     public function tableM()
     {
-        return view('merchant.tablemerchant');
+        $user = User::where('id', auth()->user()->id)->get();
+        return view('merchant.tablemerchant')->with(['user' => $user]);
     }
 
     /**

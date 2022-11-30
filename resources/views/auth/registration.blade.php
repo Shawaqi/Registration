@@ -17,8 +17,7 @@
                                 @endif
                             </div>
                             <div class="form-group mb-3">
-                                <input type="text" placeholder="Middle Name" id="mname" class="form-control" name="mname"
-                                    required autofocus>
+                                <input type="text" placeholder="Middle Name" id="mname" class="form-control" name="mname">
                                 @if ($errors->has('mname'))
                                 <span class="text-danger">{{ $errors->first('mname') }}</span>
                                 @endif
