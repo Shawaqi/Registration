@@ -9,7 +9,7 @@
                     @csrf
                     <div class="step-3">
                         <div class="card">
-                            <div class="card-header bg-dark text-white" style="text-align:center ;">MERCHANT FORM</div>
+                            <div class="card-header bg-dark text-white" style="text-align:center ;">MERCHANT FORM Kena Buat baru</div>
                             <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-6">
